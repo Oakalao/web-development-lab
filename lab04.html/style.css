@@ -1,0 +1,144 @@
+:root {
+  --ink: #1d2b33;
+  --sky: #1f6f8b;
+  --sky-dark: #174f63;
+  --gold: #e0a526;
+  --paper: #eef3f1;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+a {
+  color: inherit;
+}
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  background: var(--sky-dark);
+  color: var(--white);
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  list-style: none;
+}
+
+.nav-list a {
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-list a:hover,
+.nav-list a:focus-visible {
+  border-bottom-color: var(--gold);
+}
+
+.page {
+  display: grid;
+  grid-template-areas: "main aside";
+  grid-template-columns: 1fr 280px;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+main {
+  grid-area: main;
+}
+
+main h1 {
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  background: var(--white);
+  border-top: 4px solid var(--sky);
+  border-radius: 6px;
+}
+
+.card p {
+  flex-grow: 1;
+}
+
+.card a {
+  font-weight: 600;
+  color: var(--sky);
+}
+
+.sidebar {
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-self: start;
+  padding: 20px;
+  background: var(--white);
+  border-left: 4px solid var(--gold);
+  border-radius: 6px;
+}
+
+.sidebar h2 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.sidebar ul {
+  padding-left: 18px;
+}
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 32px;
+  background: var(--ink);
+  color: var(--white);
+}
+
+@media (max-width: 900px) {
+  .page {
+    grid-template-areas:
+      "main"
+      "aside";
+    grid-template-columns: 1fr;
+  }
+}
