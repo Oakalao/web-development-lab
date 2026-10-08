@@ -1,10 +1,11 @@
 :root {
-  --ink: #1d2b33;
-  --sky: #1f6f8b;
-  --sky-dark: #174f63;
-  --gold: #e0a526;
-  --paper: #eef3f1;
-  --white: #ffffff;
+  --wine: #6b1d2a;
+  --wine-deep: #3f1019;
+  --saffron: #f2a900;
+  --milk: #fdf6e7;
+  --card: #fffdf8;
+  --ink: #3b2a24;
+  --line: #e4be6a;
 }
 
 * {
@@ -17,11 +18,16 @@ body {
   font-family: "Segoe UI", system-ui, sans-serif;
   line-height: 1.6;
   color: var(--ink);
-  background: var(--paper);
+  background: var(--milk);
 }
 
 a {
   color: inherit;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--saffron);
+  outline-offset: 3px;
 }
 
 .site-header {
@@ -30,33 +36,36 @@ a {
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  padding: 16px 32px;
-  background: var(--sky-dark);
-  color: var(--white);
+  padding: 18px 32px;
+  background: var(--wine);
+  color: var(--milk);
+  border-bottom: 5px solid var(--saffron);
 }
 
 .logo {
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
   text-decoration: none;
 }
 
 .nav-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 24px;
+  gap: 8px 12px;
   list-style: none;
 }
 
 .nav-list a {
+  display: block;
+  padding: 6px 16px;
+  border-radius: 999px;
   text-decoration: none;
-  padding-bottom: 4px;
-  border-bottom: 2px solid transparent;
 }
 
-.nav-list a:hover,
-.nav-list a:focus-visible {
-  border-bottom-color: var(--gold);
+.nav-list a:hover {
+  background: var(--saffron);
+  color: var(--wine-deep);
 }
 
 .page {
@@ -75,6 +84,8 @@ main {
 
 main h1 {
   margin-bottom: 20px;
+  font-size: 2rem;
+  color: var(--wine);
 }
 
 .cards {
@@ -86,11 +97,17 @@ main h1 {
 .card {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 20px;
-  background: var(--white);
-  border-top: 4px solid var(--sky);
-  border-radius: 6px;
+  gap: 10px;
+  padding: 28px 26px;
+  background: var(--card);
+  border-radius: 18px;
+  outline: 2px dashed var(--line);
+  outline-offset: -10px;
+}
+
+.card h2 {
+  font-size: 1.35rem;
+  color: var(--wine);
 }
 
 .card p {
@@ -98,8 +115,18 @@ main h1 {
 }
 
 .card a {
-  font-weight: 600;
-  color: var(--sky);
+  align-self: flex-start;
+  padding: 6px 18px;
+  border-radius: 999px;
+  background: var(--saffron);
+  color: var(--wine-deep);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.card a:hover {
+  background: var(--wine);
+  color: var(--milk);
 }
 
 .sidebar {
@@ -108,19 +135,24 @@ main h1 {
   flex-direction: column;
   gap: 24px;
   align-self: start;
-  padding: 20px;
-  background: var(--white);
-  border-left: 4px solid var(--gold);
-  border-radius: 6px;
+  padding: 26px 24px;
+  background: var(--wine);
+  color: var(--milk);
+  border-radius: 18px;
 }
 
 .sidebar h2 {
-  font-size: 1.1rem;
   margin-bottom: 8px;
+  font-size: 1.15rem;
+  color: var(--saffron);
 }
 
 .sidebar ul {
   padding-left: 18px;
+}
+
+.sidebar li::marker {
+  color: var(--saffron);
 }
 
 .site-footer {
@@ -130,8 +162,9 @@ main h1 {
   align-items: center;
   gap: 12px;
   padding: 20px 32px;
-  background: var(--ink);
-  color: var(--white);
+  background: var(--wine-deep);
+  color: var(--milk);
+  border-top: 5px solid var(--saffron);
 }
 
 @media (max-width: 900px) {
