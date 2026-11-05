@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаборатори 05: Responsive статик вэб хуудас</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="logo">Оюутны Портал</h1>
+        <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Цэс нээх">
+        <label class="menu-btn" for="menu-toggle" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav class="nav" aria-label="Үндсэн цэс">
+            <ul class="nav-list">
+                <li><a class="nav-link" href="../index.html">Нүүр</a></li>
+                <li><a class="nav-link" href="#">Анкет</a></li>
+                <li><a class="nav-link" href="#">Тухай</a></li>
+                <li><a class="nav-link" href="#">Холбоо барих</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="layout">
+        <div class="content">
+            <section class="banner">
+                <h2 class="banner-title">Тавтай морил</h2>
+                <p class="banner-text">Энэ хуудас гар утас, таблет, компьютер бүрт дэлгэцийн хэмжээндээ тохирч харагдана.</p>
+            </section>
+
+            <section class="cards" aria-label="Агуулгын картууд">
+                <article class="card">
+                    <h3 class="card-title">Карт 1</h3>
+                    <p class="card-text">Гар утсанд 1 баганаар, дээрээс доош жагсана.</p>
+                </article>
+                <article class="card">
+                    <h3 class="card-title">Карт 2</h3>
+                    <p class="card-text">Таблет дээр 2 баганатай болно.</p>
+                </article>
+                <article class="card">
+                    <h3 class="card-title">Карт 3</h3>
+                    <p class="card-text">Компьютер дээр 3 баганатай болно.</p>
+                </article>
+                <article class="card">
+                    <h3 class="card-title">Карт 4</h3>
+                    <p class="card-text">Хэвтээ скролл үүсэхгүй.</p>
+                </article>
+                <article class="card">
+                    <h3 class="card-title">Карт 5</h3>
+                    <p class="card-text">Элементүүд давхцахгүй.</p>
+                </article>
+                <article class="card">
+                    <h3 class="card-title">Карт 6</h3>
+                    <p class="card-text">Mobile-First аргаар бичсэн.</p>
+                </article>
+            </section>
+        </div>
+
+        <aside class="sidebar">
+            <h2 class="sidebar-title">Хурдан холбоос</h2>
+            <ul class="sidebar-list">
+                <li>Хичээлийн хуваарь</li>
+                <li>Дүнгийн мэдээлэл</li>
+                <li>Мэдэгдэл</li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Веб зохиомж хичээл. Бүх эрх хуулиар хамгаалагдсан.</p>
+    </footer>
+</body>
+</html>
