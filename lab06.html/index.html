@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хоолны цэс | Лаб 6</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="loader" id="loader" role="status" aria-live="polite">
+        <div class="loader-ring"></div>
+        <p class="loader-text">Ачаалж байна...</p>
+    </div>
+
+    <header class="site-header">
+        <a class="brand" href="#top" aria-label="Хоолны цэс">
+            <svg class="brand-logo" viewBox="0 0 48 48" role="img" aria-labelledby="logo-title">
+                <title id="logo-title">Хоолны цэс логотип</title>
+                <rect x="4" y="8" width="40" height="32" rx="6" fill="currentColor"/>
+                <circle cx="17" cy="20" r="4" fill="var(--color-header)"/>
+                <path d="M8 36l11-11 7 7 6-6 8 10z" fill="var(--color-header)"/>
+            </svg>
+            <span class="logo">Хоолны цэс</span>
+        </a>
+        <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Цэс нээх">
+        <label class="menu-btn" for="menu-toggle" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav class="nav" aria-label="Үндсэн цэс">
+            <ul class="nav-list">
+                <li><a class="nav-link" href="../index.html">Нүүр</a></li>
+                <li><a class="nav-link" href="#gallery">Цомог</a></li>
+                <li><a class="nav-link" href="#media">Видео</a></li>
+                <li><button class="nav-link nav-btn" id="theme-toggle" type="button" aria-pressed="false">Харанхуй горим</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="layout" id="top">
+        <div class="content">
+            <section class="banner">
+                <h1 class="banner-title">Хоолны цэс</h1>
+                <p class="banner-text"> «Эргүүлэх» товчоор хоол бүрийн тайлбарыг үзнэ.</p>
+            </section>
+
+            <section id="gallery" class="cards" aria-label="Хоолны цэс">
+                <article class="card" style="--i:0">
+                    <div class="card-inner">
+                        <figure class="card-face card-front">
+                            <img src="img/photo1.jpg" alt="Уураар жигнэсэн бууз таваг дээр" loading="lazy">
+                            <figcaption class="card-caption">Бууз</figcaption>
+                        </figure>
+                        <div class="card-face card-back">
+                            <h3 class="card-title">Бууз</h3>
+                            <p class="card-desc">Уураар жигнэсэн гурилан дотор шүүслэг махтай, монголчуудын уламжлалт хоол.</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-flip" type="button" aria-pressed="false">Эргүүлэх</button>
+                </article>
+                <article class="card" style="--i:1">
+                    <div class="card-inner">
+                        <figure class="card-face card-front">
+                            <img src="img/photo2.jpg" alt="Шарсан хуушуур таваг дээр" loading="lazy">
+                            <figcaption class="card-caption">Хуушуур</figcaption>
+                        </figure>
+                        <div class="card-face card-back">
+                            <h3 class="card-title">Хуушуур</h3>
+                            <p class="card-desc">Нимгэн гурилан дотор махтай, тосонд шарсан, ирмэг нь шаржигнасан хоол.</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-flip" type="button" aria-pressed="false">Эргүүлэх</button>
+                </article>
+                <article class="card" style="--i:2">
+                    <div class="card-inner">
+                        <figure class="card-face card-front">
+                            <img src="img/photo3.jpg" alt="Мах ногоотой цуйван" loading="lazy">
+                            <figcaption class="card-caption">Цуйван</figcaption>
+                        </figure>
+                        <div class="card-face card-back">
+                            <h3 class="card-title">Цуйван</h3>
+                            <p class="card-desc">Гараар зүссэн гурилыг мах, ногоотой хамт жигнэсэн, нэг тавагтай ширхэгтэй хоол.</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-flip" type="button" aria-pressed="false">Эргүүлэх</button>
+                </article>
+                <article class="card" style="--i:3">
+                    <div class="card-inner">
+                        <figure class="card-face card-front">
+                            <img src="img/photo4.jpg" alt="Банш сүүтэй цайн хамт" loading="lazy">
+                            <figcaption class="card-caption">Банш</figcaption>
+                        </figure>
+                        <div class="card-face card-back">
+                            <h3 class="card-title">Банш</h3>
+                            <p class="card-desc">Жижиг гурилан дотор махтай, шөлөнд буцалгасан эсвэл жигнэсэн хөнгөн хоол.</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-flip" type="button" aria-pressed="false">Эргүүлэх</button>
+                </article>
+                <article class="card" style="--i:4">
+                    <div class="card-inner">
+                        <figure class="card-face card-front">
+                            <img src="img/photo5.jpg" alt="Халуун чулуугаар жигнэсэн хорхог" loading="lazy">
+                            <figcaption class="card-caption">Хорхог</figcaption>
+                        </figure>
+                        <div class="card-face card-back">
+                            <h3 class="card-title">Хорхог</h3>
+                            <p class="card-desc">Мах, ногоог халуун чулуутай хамт битүүмжлэн жигнэсэн уламжлалт хоол.</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-flip" type="button" aria-pressed="false">Эргүүлэх</button>
+                </article>
+                <article class="card" style="--i:5">
+                    <div class="card-inner">
+                        <figure class="card-face card-front">
+                            <img src="img/photo6.jpg" alt="Аяга сүүтэй цай" loading="lazy">
+                            <figcaption class="card-caption">Сүүтэй цай</figcaption>
+                        </figure>
+                        <div class="card-face card-back">
+                            <h3 class="card-title">Сүүтэй цай</h3>
+                            <p class="card-desc">Хар цайг сүү, давстай хамт чанаж, өдөр бүр уудаг монгол ундаа.</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-flip" type="button" aria-pressed="false">Эргүүлэх</button>
+                </article>
+            </section>
+
+            <section id="media" class="media">
+                <h2 class="section-title">Богино видео</h2>
+                <video class="media-video" controls preload="metadata" width="480" height="270">
+                    <source src="video/clip.webm" type="video/webm">
+                    <source src="video/clip.mp4" type="video/mp4">
+                    <track kind="captions" src="video/clip.mn.vtt" srclang="mn" label="Монгол" default>
+                    Таны хөтөч видеог дэмжихгүй байна.
+                </video>
+
+                <h2 class="section-title">Газрын зураг</h2>
+                <div class="map-wrap">
+                    <iframe class="map" title="Улаанбаатар хотын газрын зураг" loading="lazy" referrerpolicy="no-referrer"
+                            sandbox="allow-scripts allow-same-origin"
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=106.80%2C47.87%2C107.05%2C47.96&amp;layer=mapnik"></iframe>
+                </div>
+            </section>
+        </div>
+
+        <aside class="sidebar">
+            <h2 class="sidebar-title">Хурдан холбоос</h2>
+            <ul class="sidebar-list">
+                <li>Бүх зураг</li>
+                <li>Сүүлд нэмэгдсэн</li>
+                <li>Дуртай зургууд</li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Веб зохиомж хичээл. Лаб 6.</p>
+    </footer>
+</body>
+</html>
